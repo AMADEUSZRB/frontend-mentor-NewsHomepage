@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" type="text/css">
   
   <title>Frontend Mentor | News homepage</title>
 
@@ -15,46 +16,68 @@
   </style>
 </head>
 <body>
+  <nav id="navbar">
+    <img src="./assets/images/logo.svg" alt="logo">
+    <ul class="navbar-list">
+      <li><a href="#" class="navbar-link">Home</a></li>
+      <li><a href="#" class="navbar-link">New</a></li>
+      <li><a href="#" class="navbar-link">Popular</a></li>
+      <li><a href="#" class="navbar-link">Trending</a></li>
+      <li><a href="#" class="navbar-link">Categories</a></li>
+    </ul>
+  </nav>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+  <main id="main-container">
+    <section class="main-top-section">
 
-  The Bright Future of Web 3.0?
+    </section>
+    <section class="main-bottom-section">
+      <h1>The Bright Future of Web 3.0?</h1>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+      <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?</p>
 
-  Read more
+      <button>Read more</button>
+    </section>
+    <aside id="main-sidebar">
+      <h2>New</h2>
+      <div class="main-sidebar-container">
+        Hydrogen VS Electric Cars
+        Will hydrogen-fueled cars ever catch up to EVs?
+      </div>
+      <div class="main-sidebar-container">
+        The Downsides of AI Artistry
+        What are the possible adverse effects of on-demand AI image generation?
+      </div>
+      <div class="main-sidebar-container">
+        Is VC Funding Drying Up?
+        Private funding by VC firms is down 50% YOY. We take a look at what that means.
+      </div>
+    
+    </aside>
+  </main>
 
-  New 
+  <section id="bottom-section">
+    <div class="bottom-section-container">
+      01
+      Reviving Retro PCs
+      What happens when old PCs are given modern upgrades?
+    </div>
+    <div class="bottom-section-container">
+      02
+      Top 10 Laptops of 2022
+      Our best picks for various needs and budgets.
+    </div>
+    <div class="bottom-section-container">
+      03
+      The Growth of Gaming
+      How the pandemic has sparked fresh opportunities.
+    </div>
+  </section>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
+  <footer id="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 </html>
