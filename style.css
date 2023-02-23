@@ -166,16 +166,26 @@ table {
   .bottom-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
   .__box {
     display: flex;
     flex-direction: row;
     max-height: 7.8125rem;
   }
+  .__box:nth-child(1) {
+    width: 32.89473684210527%;
+  }
+  .__box:nth-child(2) {
+    width: 35.526315789473685%;
+  }
+  .__box:nth-child(3) {
+    width: 31.57894736842105%;
+  }
+
   .box_image {
-    width: 9.375rem;
-    height: 7.8125rem;
-    margin-right: 25px;
+
   }
   .box_container {
     display: flex;
@@ -187,16 +197,15 @@ table {
     color: var(--Grayishblue);
   }
   .box_header {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--VeryDarkBlue);
     margin: 16px 0;
   }
   .box_description {
     color: var(--DarkGrayishBlue);
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5625rem;
-    margin-bottom: 2.0625rem;
   }
   #box_first_image {
     background-image: url(./assets/images/image-retro-pcs.jpg);
