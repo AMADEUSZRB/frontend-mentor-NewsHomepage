@@ -87,7 +87,7 @@ table {
     background-position: center;
   }
   .navbar {
-    align-items: ;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 3.125rem;
   }
@@ -139,7 +139,7 @@ table {
     letter-spacing: .3125rem;
     font-weight: 700;
     color: var(--Offwhite);
-    background-color: hsl(5, 85%, 63%);
+    background-color: var(--SoftRed);
     padding: .9375rem 1.875rem;
     border: none;
   }
@@ -277,16 +277,14 @@ table {
     }
     .main-image {
         background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-mobile.jpg?raw=true);
-        margin-bottom: 0;
     }
     #logo {
       transform: scale(0.80);
     }
     .main-bottom {
-      display: flex;
       flex-direction: column;
     }
-    .main-bottom-first-container {
+    .main-bottom-first-container, .main-bottom-second-container {
       width: 100%;
     }
     .main-bottom-first-container h1 {
@@ -294,7 +292,6 @@ table {
       margin: 1.25rem 0;
     }
     .main-bottom-second-container {
-      width: 100%;
       margin-bottom: 3.75rem;
     }
     .main-bottom-second-container p {
@@ -313,7 +310,6 @@ table {
       flex-direction: column;
     }
     .__box {
-      max-height: auto;
       margin-top: 0rem;
       margin-bottom: 1.75rem;
       min-width: 100%;
