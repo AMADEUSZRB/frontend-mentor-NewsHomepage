@@ -19,18 +19,21 @@
 <body>
   <nav class="navbar">
     <img src="./assets/images/logo.svg" alt="logo" id="logo">
-    <button class="menu-toggle">
-      <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg" onclick=toggleMenu()><g fill="#00001A" fill-rule="evenodd">
+    <button id="menu-toggle">
+      <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd">
         <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/>
         <path d="M0 0h40v3H0z"/></g>
       </svg>
     </button>
     </div>
+    <div id="overlay"></div>
     <ul class="navbar-list">
-      <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd">
-        <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/>
-        <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g>
-      </svg>
+      <button id="menu-close">
+        <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd">
+          <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/>
+          <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g>
+        </svg>
+       </button>
       <li><a href="#" class="navbar-link">Home</a></li>
       <li><a href="#" class="navbar-link">New</a></li>
       <li><a href="#" class="navbar-link">Popular</a></li>
