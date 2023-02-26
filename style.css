@@ -108,7 +108,7 @@ table {
   }
   .main-image {
     grid-area: 1 / 1 / 2 / 3;
-    background-image: url(./assets/images/image-web-3-desktop.jpg);
+    background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-desktop.jpg?raw=true);
     height: 18.75rem;
   }
   .main-bottom {
@@ -208,13 +208,13 @@ table {
     line-height: 1.5625rem;
   }
   #box_first_image {
-    background-image: url(./assets/images/image-retro-pcs.jpg);
+    background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-retro-pcs.jpg?raw=true);
   }
   #box_second_image {
-    background-image: url(./assets/images/image-top-laptops.jpg);
+    background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-top-laptops.jpg?raw=true);
   }
   #box_third_image {
-    background-image: url(./assets/images/image-gaming-growth.jpg);
+    background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-gaming-growth.jpg?raw=true);
   }
 
   /* Actives */
@@ -276,7 +276,7 @@ table {
       height: auto;
     }
     .main-image {
-        background-image: url(./assets/images/image-web-3-mobile.jpg);
+        background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-mobile.jpg?raw=true);
         margin-bottom: 0;
     }
     #logo {
