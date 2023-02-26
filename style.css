@@ -87,7 +87,7 @@ table {
     background-position: center;
   }
   .navbar {
-    align-items: center;
+    align-items: ;
     justify-content: space-between;
     margin-bottom: 3.125rem;
   }
@@ -108,7 +108,7 @@ table {
   }
   .main-image {
     grid-area: 1 / 1 / 2 / 3;
-    background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-web-3-desktop.jpg);
+    background-image: url(./assets/images/image-web-3-desktop.jpg);
     height: 18.75rem;
   }
   .main-bottom {
@@ -208,13 +208,13 @@ table {
     line-height: 1.5625rem;
   }
   #box_first_image {
-    background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-retro-pcs.jpg);
+    background-image: url(./assets/images/image-retro-pcs.jpg);
   }
   #box_second_image {
-    background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-top-laptops.jpg);
+    background-image: url(./assets/images/image-top-laptops.jpg);
   }
   #box_third_image {
-    background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-gaming-growth.jpg);
+    background-image: url(./assets/images/image-gaming-growth.jpg);
   }
 
   /* Actives */
@@ -276,7 +276,7 @@ table {
       height: auto;
     }
     .main-image {
-        background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-web-3-mobile.jpg);
+        background-image: url(./assets/images/image-web-3-mobile.jpg);
         margin-bottom: 0;
     }
     #logo {
@@ -321,14 +321,5 @@ table {
     .box_header {
       font-size: 1rem;
       margin: .625rem 0;
-    }
-    #box_first_image {
-      background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-retro-pcs.jpg);
-    }
-    #box_second_image {
-      background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-top-laptops.jpg);
-    }
-    #box_third_image {
-      background-image: url(/frontend-mentor-NewsHomepage/frontend-mentor-NewsHomepage/assets/images/image-gaming-growth.jpg);
     }
   }
