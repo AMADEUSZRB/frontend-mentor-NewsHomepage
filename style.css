@@ -34,6 +34,9 @@
      border-collapse: collapse;
      border-spacing: 0;
 }
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
  :root {
      --Offwhite: hsl(36, 100%, 99%);
      --Grayishblue: hsl(233, 8%, 79%);
@@ -61,11 +64,8 @@
      border: none;
      cursor: pointer;
 }
- .navbar, .navbar-list, .main-bottom, .main-bottom-first-container, .main-bottom-second-container, .main-sidebar, .main-sidebar-container, .left_box_container, .__box, .box_container {
+ .navbar, #navbar-list, .main-image-header, .main-image-description, .sidebar, .sidebar-container, .__bottom_boxes, .__box, .box_container {
      display: flex;
-}
- .__box:nth-child(1), .__box:nth-child(2) , .main-bottom-second-container,.main-bottom-first-container {
-     width: 50%;
 }
  #box_first_image, #box_second_image, #box_third_image, .main-image {
      background-size: cover;
@@ -76,7 +76,7 @@
      justify-content: space-between;
      margin-bottom: 3.125rem;
 }
- .navbar-list {
+ #navbar-list {
      justify-content: space-between;
      gap: 2.5rem;
 }
@@ -85,41 +85,57 @@
      color: var(--DarkGrayishBlue);
 }
  .main-wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-column-gap: 1.875rem;
-     height: 43.75rem;
-     margin-bottom: 1.25rem;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(auto-fit,); 
+    gap: 0px 1.875rem; 
+    grid-template-areas: 
+    "main-image main-image aside"
+    "main-image-header main-image-description aside"
+    "__bottom_boxes __bottom_boxes __bottom_boxes"; 
 }
- .main-image {
-     grid-area: 1 / 1 / 2 / 3;
+.main-image { 
+    grid-area: main-image;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-image-header { 
+    grid-area: main-image-header; 
+}
+
+.main-image-description { 
+    grid-area: main-image-description; 
+}
+
+.aside { 
+    grid-area: aside; 
+}
+
+.main-image {
      background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-desktop.jpg?raw=true);
      height: 18.75rem;
 }
- .main-bottom {
-     grid-area: 2 / 1 / 3 / 3;
-}
- .main-bottom-first-container {
+ .main-image-header {
      display: flex;
-     align-items: center;
 }
- .main-bottom-first-container h1 {
+ .main-image-header h1 {
      font-size: 3.75rem;
      font-weight: 800;
      color: var(--VeryDarkBlue);
 }
- .main-bottom-second-container {
+ .main-image-description {
      flex-direction: column;
      align-items: flex-start;
-     justify-content: center;
 }
- .main-bottom-second-container p {
+ .main-image-description p {
      color: var(--DarkGrayishBlue);
      font-size: 1rem;
      line-height: 1.5625rem;
      margin-bottom: 2.0625rem;
 }
- .main-bottom-second-container button {
+ .main-image-description button {
      text-transform: uppercase;
      letter-spacing: .3125rem;
      font-weight: 700;
@@ -128,47 +144,53 @@
      padding: .9375rem 1.875rem;
      border: none;
 }
- .main-sidebar {
-     grid-area: 1 / 3 / 3 / 4;
+ .sidebar {
      flex-direction: column;
      background-color: var(--VeryDarkBlue);
      padding: 2.1875rem 1.5625rem;
      overflow: hidden;
 }
- .main-sidebar h2 {
+ .sidebar h2 {
      color: hsl(35, 77%, 62%);
      font-size: 2.5rem;
      font-weight: 700;
 }
- .main-sidebar-container {
+ .sidebar-container {
      flex-direction: column;
      padding: 1.875rem 0;
      border-bottom: solid 1px var(--DarkGrayishBlue);
 }
- .main-sidebar-container:last-child {
+ .sidebar-container:last-child {
      border-bottom: none;
 }
- .main-sidebar-container-header {
+ .sidebar-container-header {
      color: var(--Offwhite);
      font-weight: 700;
      font-size: 1.25rem;
      margin-bottom: .9375rem;
 }
- .main-sidebar-container-description {
+ .sidebar-container-description {
      color: var(--Grayishblue);
      line-height: 1.5625rem;
 }
- .left_box_container {
-     grid-area: 3 / 1 / 4 / 3;
-}
- .__box {
+.__bottom_boxes {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 1.875rem; 
+    grid-template-areas: 
+      "__boxOne __BoxTwo __BoxThree"; 
+    grid-area: __bottom_boxes; 
+  }
+  .__boxOne { grid-area: __boxOne; }
+  .__BoxTwo { grid-area: __BoxTwo; }
+  .__BoxThree { grid-area: __BoxThree; }
+
+.__box {
      max-height: 7.8125rem;
      margin-top: 3.4375rem;
 }
- .__box:nth-child(3) {
-     grid-area: 3 / 3 / 4 / 4;
-}
- .box_image {
+.box_image {
      min-width: 6.25rem;
      min-height: 7.9375rem;
      margin-right: 1.25rem;
@@ -234,7 +256,7 @@
      .navbar {
          margin-bottom: 1.875rem;
     }
-     .navbar-list {
+     #navbar-list {
          padding: 1.5625rem 1.25rem;
          flex-direction: column;
          justify-content: flex-start;
@@ -242,12 +264,12 @@
          position: fixed;
          background-color: white;
          height: 100vh;
-         width: 13.75rem;
+         width: 14.322916666666666vw;
          gap: 1.875rem;
          top: 0;
-         right: -100vh;
+         transform: translate3d(-100vw,0,0);
          transition: all 0.5s;
-         z-index: 2;
+         z-index: 1000;
     }
      .navbar-link {
          font-size: 1.125rem;
@@ -300,5 +322,11 @@
      .box_header {
          font-size: 1rem;
          margin: .625rem 0;
+    }
+    .activeOn {
+        transform: translate3d(0vw, 0, 0);
+    }
+    .activeOff {
+
     }
 }

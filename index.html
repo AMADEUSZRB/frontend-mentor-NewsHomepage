@@ -9,15 +9,10 @@
   
   <title>Frontend Mentor | News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center;}
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
 </head>
 <body>
   <nav class="navbar">
+
     <img src="./assets/images/logo.svg" alt="logo" id="logo">
     <button id="menu-toggle">
       <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd">
@@ -27,50 +22,51 @@
     </button>
     </div>
     <div id="overlay"></div>
-    <ul class="navbar-list">
-      <button id="menu-close">
-        <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd">
-          <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/>
-          <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g>
-        </svg>
-       </button>
-      <li><a href="#" class="navbar-link">Home</a></li>
-      <li><a href="#" class="navbar-link">New</a></li>
-      <li><a href="#" class="navbar-link">Popular</a></li>
-      <li><a href="#" class="navbar-link">Trending</a></li>
-      <li><a href="#" class="navbar-link">Categories</a></li>
-    </ul>
-  </nav>
 
+    <div class="navbar-list">
+        <button id="menu-close">
+          <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd">
+            <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/>
+            <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g>
+          </svg>
+        </button>
+        <ul>
+          <li><a href="#" class="navbar-link">Home</a></li>
+          <li><a href="#" class="navbar-link">New</a></li>
+          <li><a href="#" class="navbar-link">Popular</a></li>
+          <li><a href="#" class="navbar-link">Trending</a></li>
+          <li><a href="#" class="navbar-link">Categories</a></li>
+        </ul>
+      </div>
+
+  </nav>
   <main class="main-wrapper">
-      <div class="main-image">
-      </div>
-      <div class="main-bottom">
-        <div class="main-bottom-first-container">
-          <h1>The Bright Future of Web 3.0?</h1>
-        </div>
-        <div class="main-bottom-second-container">
-          <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-            But is it really fulfilling its promise?</p>
-          <button>Read more</button>
-        </div>
-      </div>
-    <aside class="main-sidebar">
+    <div class="main-image">
+    </div>
+    <div class="main-image-header">
+      <h1>The Bright Future of Web 3.0?</h1>
+    </div>
+    <div class="main-image-description">
+      <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?</p>
+      <button>Read more</button>
+    </div>
+    <aside class="sidebar">
       <h2>New</h2>
-      <div class="main-sidebar-container">
-        <h3 class="main-sidebar-container-header">Hydrogen VS Electric Cars</h3>
-        <p class="main-sidebar-container-description">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      <div class="sidebar-container">
+        <h3 class="sidebar-container-header">Hydrogen VS Electric Cars</h3>
+        <p class="sidebar-container-description">Will hydrogen-fueled cars ever catch up to EVs?</p>
       </div>
-      <div class="main-sidebar-container">
-        <h3 class="main-sidebar-container-header">The Downsides of AI Artistry</h3>
-        <p class="main-sidebar-container-description">What are the possible adverse effects of on-demand AI image generation?</p>
+      <div class="sidebar-container">
+        <h3 class="sidebar-container-header">The Downsides of AI Artistry</h3>
+        <p class="sidebar-container-description">What are the possible adverse effects of on-demand AI image generation?</p>
       </div>
-      <div class="main-sidebar-container">
-        <h3 class="main-sidebar-container-header">Is VC Funding Drying Up?</h3>
-        <p class="main-sidebar-container-description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      <div class="sidebar-container">
+        <h3 class="sidebar-container-header">Is VC Funding Drying Up?</h3>
+        <p class="sidebar-container-description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
       </div>
     </aside>
-    <div class="left_box_container">
+    <div class="__bottom_boxes">
       <div class="__box">
         <div class="box_image" id="box_first_image"></div>
         <div class="box_container">
@@ -87,13 +83,13 @@
           <div class="box_description">Our best picks for various needs and budgets.</div>
         </div>
       </div>
-    </div>
-    <div class="__box" id="last_box">
-      <div class="box_image" id="box_third_image"></div>
-      <div class="box_container">
-        <div class="box_number">03</div>
-        <div class="box_header">The Growth of Gaming</div>
-        <div class="box_description">How the pandemic has sparked fresh opportunities.</div>
+      <div class="__box" id="last_box">
+        <div class="box_image" id="box_third_image"></div>
+        <div class="box_container">
+          <div class="box_number">03</div>
+          <div class="box_header">The Growth of Gaming</div>
+          <div class="box_description">How the pandemic has sparked fresh opportunities.</div>
+        </div>
       </div>
     </div>
   </main>
