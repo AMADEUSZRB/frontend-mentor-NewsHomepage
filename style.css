@@ -34,9 +34,6 @@
      border-collapse: collapse;
      border-spacing: 0;
 }
-.attribution { font-size: 11px; text-align: center;}
-.attribution a { color: hsl(228, 45%, 44%); }
-
  :root {
      --Offwhite: hsl(36, 100%, 99%);
      --Grayishblue: hsl(233, 8%, 79%);
@@ -44,10 +41,20 @@
      --VeryDarkBlue: hsl(240, 100%, 5%);
      --SoftOrange: hsl(35, 77%, 62%);
      --SoftRed: hsl(5, 85%, 63%);
+     --gap: 1.875rem;
+}
+#menu-toggle, #menu-close, #overlay {
+     display: none;
+}
+.navbar, .list, .main-image-description, .sidebar, .sidebar-container, .__bottom_boxes, .__box, .box_container {
+     display: flex;
+}
+ #box_first_image, #box_second_image, #box_third_image, .main-image {
+     background-size: cover;
+     background-position: center;
 }
  #overlay {
      position: fixed;
-     display: none;
      width: 100%;
      height: 100%;
      top: 0;
@@ -58,27 +65,14 @@
      z-index: 2;
      cursor: pointer;
 }
- #menu-toggle, #menu-close {
-     display: none;
-     background-color: transparent;
-     border: none;
-     cursor: pointer;
-}
- .navbar, #navbar-list, .main-image-header, .main-image-description, .sidebar, .sidebar-container, .__bottom_boxes, .__box, .box_container {
-     display: flex;
-}
- #box_first_image, #box_second_image, #box_third_image, .main-image {
-     background-size: cover;
-     background-position: center;
-}
  .navbar {
      align-items: center;
      justify-content: space-between;
      margin-bottom: 3.125rem;
 }
- #navbar-list {
+ .list {
      justify-content: space-between;
-     gap: 2.5rem;
+     gap: 40px;
 }
  .navbar-link {
      text-decoration: none;
@@ -87,55 +81,37 @@
  .main-wrapper {
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(auto-fit,); 
-    gap: 0px 1.875rem; 
+    gap: var(--gap); 
     grid-template-areas: 
-    "main-image main-image aside"
-    "main-image-header main-image-description aside"
+    "main-image main-image sidebar"
+    "main-image-header main-image-description sidebar"
     "__bottom_boxes __bottom_boxes __bottom_boxes"; 
 }
-.main-image { 
-    grid-area: main-image;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.main-image-header { 
-    grid-area: main-image-header; 
-}
-
-.main-image-description { 
-    grid-area: main-image-description; 
-}
-
-.aside { 
-    grid-area: aside; 
-}
-
 .main-image {
+     grid-area: main-image;
      background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-desktop.jpg?raw=true);
-     height: 18.75rem;
+     min-height: 300px;
 }
- .main-image-header {
-     display: flex;
-}
- .main-image-header h1 {
-     font-size: 3.75rem;
+
+.main-image-header {
+     grid-area: main-image-header;
+     font-size: clamp(2.5625rem, 2.2544rem + 1.3146vw, 3.4375rem);
      font-weight: 800;
      color: var(--VeryDarkBlue);
-}
- .main-image-description {
+ }
+
+.main-image-description {
+     grid-area: main-image-description;
      flex-direction: column;
      align-items: flex-start;
-}
+ }
  .main-image-description p {
      color: var(--DarkGrayishBlue);
-     font-size: 1rem;
+     font-size: clamp(0.9375rem, 0.9223rem + 0.0647vw, 1rem);
      line-height: 1.5625rem;
-     margin-bottom: 2.0625rem;
+     margin-bottom: var(--gap);
 }
- .main-image-description button {
+.main-image-description button {
      text-transform: uppercase;
      letter-spacing: .3125rem;
      font-weight: 700;
@@ -144,15 +120,15 @@
      padding: .9375rem 1.875rem;
      border: none;
 }
- .sidebar {
+.sidebar { 
+     grid-area: sidebar;
      flex-direction: column;
      background-color: var(--VeryDarkBlue);
-     padding: 2.1875rem 1.5625rem;
-     overflow: hidden;
+     padding: 2.1875rem 30px; 
 }
  .sidebar h2 {
      color: hsl(35, 77%, 62%);
-     font-size: 2.5rem;
+     font-size: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
      font-weight: 700;
 }
  .sidebar-container {
@@ -161,6 +137,7 @@
      border-bottom: solid 1px var(--DarkGrayishBlue);
 }
  .sidebar-container:last-child {
+     padding-bottom: 0;
      border-bottom: none;
 }
  .sidebar-container-header {
@@ -172,46 +149,39 @@
  .sidebar-container-description {
      color: var(--Grayishblue);
      line-height: 1.5625rem;
+     font-size: 15px;
 }
 .__bottom_boxes {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 1.875rem; 
-    grid-template-areas: 
-      "__boxOne __BoxTwo __BoxThree"; 
-    grid-area: __bottom_boxes; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    gap: var(--gap);
+    grid-area: __bottom_boxes;
+    margin-top: var(--gap);
   }
-  .__boxOne { grid-area: __boxOne; }
-  .__BoxTwo { grid-area: __BoxTwo; }
-  .__BoxThree { grid-area: __BoxThree; }
-
 .__box {
      max-height: 7.8125rem;
-     margin-top: 3.4375rem;
 }
 .box_image {
      min-width: 6.25rem;
-     min-height: 7.9375rem;
+     min-height: 7.8125rem;
      margin-right: 1.25rem;
 }
  .box_container {
      flex-direction: column;
 }
  .box_number {
-     font-size: 1.625rem;
+     font-size: 30px;
      font-weight: 700;
      color: var(--Grayishblue);
 }
  .box_header {
-     font-size: 1.125rem;
+     font-size: clamp(1.15rem, 1.1148rem + 0.1502vw, 1.25rem);
      font-weight: 800;
      color: var(--VeryDarkBlue);
      margin: 1rem 0;
 }
  .box_description {
      color: var(--DarkGrayishBlue);
-     font-size: .9375rem;
      line-height: 1.5625rem;
 }
  #box_first_image {
@@ -223,110 +193,98 @@
  #box_third_image {
      background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-gaming-growth.jpg?raw=true);
 }
+
 /* Actives */
- .navbar-link:hover, .box_header:hover, .main-sidebar-container-header:hover, .main-bottom-second-container > button:hover {
+ .navbar-link:hover, .box_header:hover, .sidebar-container-header:hover, .main-image-description > button:hover {
      cursor: pointer;
 }
  .navbar-link:hover, .box_header:hover {
      color: var(--SoftRed);
 }
- .main-sidebar-container-header:hover {
+ .sidebar-container-header:hover {
      color: var(--SoftOrange);
 }
- .main-bottom-second-container > button:hover {
+ .main-image-description > button:hover {
      color: white;
      background-color: black;
 }
-/* Mobile */
- @media (max-width:900px) {
-     body {
-         min-height: 100%;
-         margin: 0;
-         padding: 2.5rem 1.25rem;
-    }
-     #menu-toggle, #menu-close {
-         display: block;
-    }
-     #menu-close {
-         align-self: flex-end;
-         height: max-content;
-         width: max-content;
-         margin-bottom: 5rem;
-    }
-     .navbar {
-         margin-bottom: 1.875rem;
-    }
-     #navbar-list {
-         padding: 1.5625rem 1.25rem;
-         flex-direction: column;
-         justify-content: flex-start;
-         flex-wrap: nowrap;
-         position: fixed;
-         background-color: white;
-         height: 100vh;
-         width: 14.322916666666666vw;
-         gap: 1.875rem;
-         top: 0;
-         transform: translate3d(-100vw,0,0);
-         transition: all 0.5s;
-         z-index: 1000;
-    }
-     .navbar-link {
-         font-size: 1.125rem;
-         color: black;
-    }
-     .main-wrapper {
-         display: flex;
-         flex-direction: column;
-         height: auto;
-    }
-     .main-image {
-         background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-mobile.jpg?raw=true);
-    }
-     #logo {
-         transform: scale(0.80);
-    }
-     .main-bottom {
-         flex-direction: column;
-    }
-     .main-bottom-first-container, .main-bottom-second-container {
-         width: 100%;
-    }
-     .main-bottom-first-container h1 {
-         font-size: 2.5rem;
-         margin: 1.25rem 0;
-    }
-     .main-bottom-second-container {
-         margin-bottom: 3.75rem;
-    }
-     .main-bottom-second-container p {
-         font-size: .9375rem;
-         margin-bottom: 1.25rem;
-    }
-     .main-sidebar {
-         overflow: unset;
-         margin-bottom: 3.75rem;
-    }
-     .main-sidebar-container:last-child {
-         padding-bottom: 0;
-    }
-     .left_box_container {
-         display: flex;
-         flex-direction: column;
-    }
-     .__box {
-         margin-top: 0rem;
-         margin-bottom: 1.75rem;
-         min-width: 100%;
-    }
-     .box_header {
-         font-size: 1rem;
-         margin: .625rem 0;
-    }
-    .activeOn {
-        transform: translate3d(0vw, 0, 0);
-    }
-    .activeOff {
 
-    }
+/* Breakpoints*/
+
+/* Mobile devices */
+@media (max-width: 900px){
+       body {
+           padding: var(--gap) 15px;
+      }
+      .navbar-list, .list, .__bottom_boxes, .sidebar-container, .main-wrapper {
+          display: flex;
+          flex-direction: column;
+      }
+       #menu-toggle, #menu-close {
+           display: block;
+           background-color: transparent;
+           border: none;
+           cursor: pointer;
+      }
+       #menu-close {
+           align-self: flex-end;
+           margin-bottom: 5rem;
+      }
+      .list {
+          gap: var(--gap);
+      }
+       .navbar {
+           margin-bottom: var(--gap);
+      }
+       .navbar-list {
+           padding: 1.5625rem 1.25rem;
+           justify-content: flex-start;
+           position: fixed;
+           background-color: white;
+           height: 100vh;
+           width: 215px;
+           top: 0;
+           right: -100vh;
+           transition: all 0.5s;
+           z-index: 1000;
+      }
+       .navbar-link {
+           font-size: 1.125rem;
+           color: black;
+      }
+       .main-wrapper {
+          gap: 0;
+      }
+       .main-image {
+           background-image: url(https://github.com/AMADEUSZRB/frontend-mentor-NewsHomepage/blob/main/assets/images/image-web-3-mobile.jpg?raw=true);
+      }
+       #logo {
+           transform: scale(0.78);
+      }
+       .main-image-header h1 {
+          margin: 1.25rem 0;
+      }
+      .main-image-description {
+          margin-bottom: calc(var(--gap) * 2);
+      }
+       .__box {
+           margin-bottom: 1.75rem;
+      }
+      .sidebar {
+          padding: 1.5625rem 1.25rem;
+          margin-bottom: var(--gap);
+     }
+      .sidebar-container {
+          padding: 1.875rem 0;
+          border-bottom: solid 1px var(--DarkGrayishBlue);
+     }
+     .__bottom_boxes {
+          gap: 0;
+     }
+}
+/* Desktops, large screens */
+@media (min-width: 901px) and (max-width: 1200px){
+     body {
+          padding: 2.5rem 3.75rem;
+     }
 }
